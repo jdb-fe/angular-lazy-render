@@ -12,6 +12,7 @@
     "docs:serve": "npm run docs -- -s",
     "prerelease": "npm run build:lib",
     "release": "standard-version",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

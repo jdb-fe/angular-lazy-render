@@ -1,4 +1,8 @@
-# angular-lazy-render [![angular-lazy-render](https://img.shields.io/npm/v/angular-lazy-render.svg)](https://www.npmjs.com/package/angular-lazy-render) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+# angular-lazy-render 
+
+[![angular-lazy-render](https://img.shields.io/npm/v/angular-lazy-render.svg)](https://www.npmjs.com/package/angular-lazy-render)
+[![npm License](https://img.shields.io/npm/l/angular-lazy-render.svg?style=flat-square)](https://github.com/jdb-fe/angular-lazy-render/blob/master/LICENSE)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 
 renderng page by block
@@ -41,20 +45,20 @@ wrap your page with `<lazy-page>`, and then block your page, wrap each page bloc
 
 ```html
 <lazy-page index="1">
+  <lazy-block>
+    section-0<h1>{{title}}</h1>
+  </lazy-block>
+  <section>
     <lazy-block>
-        section-0<h1>{{title}}</h1>
+      section-1 first render
     </lazy-block>
-    <section>
-        <lazy-block>
-            section-1 first render
-        </lazy-block>
-        <lazy-block>
-            section-2
-        </lazy-block>
-    </section>
     <lazy-block>
-        <footer>section-3</footer>
+      section-2
     </lazy-block>
+  </section>
+  <lazy-block>
+    <footer>section-3</footer>
+  </lazy-block>
 </lazy-page>
 ```
 
@@ -62,10 +66,14 @@ wrap your page with `<lazy-page>`, and then block your page, wrap each page bloc
 
 ## Development
 
+```bash
+npm start
+```
+
 To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
 
 ```bash
-$ npm run build:lib
+npm run build:lib
 ```
 
 To lint all `*.ts` files:
