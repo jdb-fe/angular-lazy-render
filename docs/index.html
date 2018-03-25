@@ -291,7 +291,10 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1 id="angular-lazy-render-angular-lazy-render-conventional-commits">angular-lazy-render <a href="https://www.npmjs.com/package/angular-lazy-render"><img src="https://img.shields.io/npm/v/angular-lazy-render.svg" alt="angular-lazy-render" class="img-responsive"></a> <a href="https://conventionalcommits.org"><img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" alt="Conventional Commits" class="img-responsive"></a></h1>
+<h1 id="angular-lazy-render">angular-lazy-render</h1>
+<p><a href="https://www.npmjs.com/package/angular-lazy-render"><img src="https://img.shields.io/npm/v/angular-lazy-render.svg" alt="angular-lazy-render" class="img-responsive"></a>
+<a href="https://github.com/jdb-fe/angular-lazy-render/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/angular-lazy-render.svg?style=flat-square" alt="npm License" class="img-responsive"></a>
+<a href="https://conventionalcommits.org"><img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" alt="Conventional Commits" class="img-responsive"></a></p>
 <p>renderng page by block</p>
 <h2 id="installation">Installation</h2>
 <pre class="line-numbers"><code class="language-bash">npm install angular-lazy-render --save</code></pre><h2 id="usage">Usage</h2>
@@ -316,24 +319,24 @@ import { AppComponent } from &#39;./app.component&#39;;
 })
 export class AppModule { }</code></pre><p>wrap your page with <code>&lt;lazy-page&gt;</code>, and then block your page, wrap each page block with <code>&lt;lazy-block&gt;</code></p>
 <pre class="line-numbers"><code class="language-html">&lt;lazy-page index=&quot;1&quot;&gt;
+  &lt;lazy-block&gt;
+    section-0&lt;h1&gt;{{title}}&lt;/h1&gt;
+  &lt;/lazy-block&gt;
+  &lt;section&gt;
     &lt;lazy-block&gt;
-        section-0&lt;h1&gt;{{title}}&lt;/h1&gt;
+      section-1 first render
     &lt;/lazy-block&gt;
-    &lt;section&gt;
-        &lt;lazy-block&gt;
-            section-1 first render
-        &lt;/lazy-block&gt;
-        &lt;lazy-block&gt;
-            section-2
-        &lt;/lazy-block&gt;
-    &lt;/section&gt;
     &lt;lazy-block&gt;
-        &lt;footer&gt;section-3&lt;/footer&gt;
+      section-2
     &lt;/lazy-block&gt;
+  &lt;/section&gt;
+  &lt;lazy-block&gt;
+    &lt;footer&gt;section-3&lt;/footer&gt;
+  &lt;/lazy-block&gt;
 &lt;/lazy-page&gt;</code></pre><p><code>index</code>: mark the first rendering block, default <code>0</code></p>
 <h2 id="development">Development</h2>
-<p>To generate all <code>*.js</code>, <code>*.d.ts</code> and <code>*.metadata.json</code> files:</p>
-<pre class="line-numbers"><code class="language-bash">$ npm run build:lib</code></pre><p>To lint all <code>*.ts</code> files:</p>
+<pre class="line-numbers"><code class="language-bash">npm start</code></pre><p>To generate all <code>*.js</code>, <code>*.d.ts</code> and <code>*.metadata.json</code> files:</p>
+<pre class="line-numbers"><code class="language-bash">npm run build:lib</code></pre><p>To lint all <code>*.ts</code> files:</p>
 <pre class="line-numbers"><code class="language-bash">$ npm run lint</code></pre><h2 id="license">License</h2>
 <p>MIT © <a href="mailto:yhz1219@gmail.com">angular-lazy-render</a></p>
 
