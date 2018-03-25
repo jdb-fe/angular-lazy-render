@@ -1,0 +1,21 @@
+{
+  "name": "@jdb/angular-lazy-render",
+  "version": "0.1.2",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jdb-fe/angular-lazy-render.git"
+  },
+  "author": "bukas <yhz1219@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "peerDependencies": {
+    "@angular/core": "^4.0.0"
+  },
+  "ngPackage": {
+    "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+    "lib": {
+      "entryFile": "src/public_api.ts"
+    },
+    "dest": "dist/lib"
+  }
+}
